@@ -27,5 +27,18 @@ public class Datas {
         DateTimeFormatter formatador = DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
         String HojeFormatado = hoje.format(formatador);
         System.out.println(HojeFormatado);
+        
+        //Pegar informações de uma data
+        //Algumas informações estão em ingles
+
+        System.out.println("Dia da semana: " + hoje.getDayOfWeek().name());
+        System.out.println("Dia: " + hoje.getDayOfMonth());
+        System.out.println("Mês: " + hoje.getMonthValue());
+        System.out.println("Mês: " + hoje.getMonth().name());
+        System.out.println("Ano: " + hoje.getYear());
+        
+        //Pegar as informações em portugues
+        
+        
     }
 }
