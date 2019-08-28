@@ -16,6 +16,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.ListView;
+import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 
 /**
  * FXML Controller class
@@ -30,6 +32,8 @@ public class Aula05Controller implements Initializable {
     private ComboBox<String> CBCidade;
     @FXML
     private ListView<String> LVCidade;
+    @FXML
+    private Spinner<Integer> SPeriodo;
 
     /**
      * Initializes the controller class.
@@ -53,6 +57,12 @@ public class Aula05Controller implements Initializable {
         
         //Asdicionar lista no ListView
         LVCidade.setItems(Lista);
+        
+        //Configurar o Spinner
+        //Primeiro parametro é o minimo e segundo o maximo e o terceiro opcional
+        SpinnerValueFactory<Integer> Valores = new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 8);
+        
+        SPeriodo.setValueFactory(Valores);
     }    
 
     @FXML
@@ -68,6 +78,8 @@ public class Aula05Controller implements Initializable {
         
         String Selecionado = LVCidade.getSelectionModel().getSelectedItem();
         System.out.println(Selecionado);
+        
+        System.out.println(SPeriodo.getValue());
         
     }
     

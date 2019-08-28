@@ -5,6 +5,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
@@ -26,6 +27,12 @@
       </Label>
       <ListView fx:id="LVCidade" layoutX="258.0" layoutY="189.0" prefHeight="200.0" prefWidth="200.0" />
       <Label layoutX="63.0" layoutY="189.0" text="Cidade:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Spinner fx:id="SPeriodo" layoutX="156.0" layoutY="440.0" prefHeight="25.0" prefWidth="251.0" />
+      <Label layoutX="63.0" layoutY="443.0" text="Período">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
