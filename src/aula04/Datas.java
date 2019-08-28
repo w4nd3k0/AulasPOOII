@@ -7,6 +7,8 @@ package aula04;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
+import java.time.format.TextStyle;
+import java.util.*;
 /**
  *
  * @author IFNMG
@@ -38,7 +40,9 @@ public class Datas {
         System.out.println("Ano: " + hoje.getYear());
         
         //Pegar as informações em portugues
-        
-        
+        String DiadaSemana = hoje.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.getDefault());
+        String Mes = hoje.getMonth().getDisplayName(TextStyle.FULL, Locale.getDefault());
+        System.out.println("Dia da Semana: " + DiadaSemana);
+        System.out.println("Mês: " + Mes);
     }
 }
