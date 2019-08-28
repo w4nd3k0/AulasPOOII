@@ -5,7 +5,7 @@
  */
 package aula04;
 import java.time.*;
-import java.time.format.DateTimeFormatter;
+import java.time.format.*;
 import java.time.format.FormatStyle;
 import java.time.format.TextStyle;
 import java.util.*;
@@ -75,5 +75,22 @@ public class Datas {
         System.out.println("Menos 1 ano: " + hoje.minusYears(1));
         System.out.println("Menos 1 mês: " + hoje.minusMonths(1));
         System.out.println("Menos 1 ano: " + hoje.minusYears(1));
+        
+        //Data com tempo
+        LocalDateTime Agora = LocalDateTime.now();
+        System.out.println("Data/Hora: " + Agora);
+        
+        
+        //Formatando no formato brasileiro
+        DateTimeFormatter Formatado2 = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.MEDIUM);
+        String AgoraFormato2 = Agora.format(Formatado2);
+        System.out.println(AgoraFormato2);
+        
+        //pegando Horas Minutos Segundos e nanosegundos de um LocalDateTime
+        
+        System.out.println("Hora: " + Agora.getHour());
+        System.out.println("Minutos: " + Agora.getMinute());
+        System.out.println("Segundos: " + Agora.getSecond());
+        System.out.println("NanoSegundos: " + Agora.getNano());
     }
 }
